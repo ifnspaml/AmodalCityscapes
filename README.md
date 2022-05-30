@@ -14,7 +14,7 @@ For more details, please refer to our paper:
     pages     = {1--8},
     }
 
-####Installation
+#### Installation
 
 Requirements to run our code are:
 - Pytorch 1.10.0
@@ -37,7 +37,7 @@ a) re-generate the Amodal Cityscapes dataset
 
 b) generate your own copy-paste dataset
 
-#####Instance  Extraction
+##### Instance  Extraction
 To make dataset creation easier, we first extract the instances from the standard dataset. In our case, this is the Cityscapes dataset.
 
 To run the instance extraction, run:
@@ -51,7 +51,7 @@ You can also use the provided SLURM script. The Python script assumes that label
 This needs to be run also for regeneration of the Amodal Cityscapes dataset.
 If you need to generate a new dataset from a different base dataset, the code needs to be adapted to the desired filenames.
 
-#####Dataset Generation
+##### Dataset Generation
 
 a) Re-Generate the Amodal Cityscapes dataset
 
@@ -82,7 +82,7 @@ Run this with split `test` and `train` to generate a training, validation and te
 the training and validation dataset split by choosing 75 randomly selected images of the Cityscapes training dataset as the validation split.
 Per default, the script uses Gaussian blurring and histogram matching when inserting the source instances.
 
-####Training
+#### Training
 
 Go to the training folder. 
 We used the ERFNet for training [1]. You can find the modelfile in the respective [repository](https://github.com/Eromera/erfnet_pytorch). 
@@ -119,7 +119,7 @@ To run the training for K=3 groups, run
          
 Other settings for K=3 are set per default in the python file `training_k3.py` like the number of classes.
 
-####Evaluation
+#### Evaluation
 
 You can evaluate your trained models using the scripts in the Evaluation folder. 
 
@@ -148,7 +148,7 @@ For the normal evaluation, run:
     --loadModel corner_case_detection/model/erfnet \
     --modeltype normal --dataset normal --numgroups 3 --numclasses 20 \
 
-####References
+#### References
 [1] E. Romera, J. M. Álvarez, L. M. Bergasa, and R. Arroyo, “ERFNet:
 Efficient Residual Factorized ConvNet for Real-Time Semantic Segmentation,”
 IEEE Transactions on Intelligent Transportation Systems,
